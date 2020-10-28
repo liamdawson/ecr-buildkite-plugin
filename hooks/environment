@@ -166,6 +166,8 @@ function assume_role_for_ecr_login() {
 
   #shellcheck disable=SC2086
   export ${export_credentials?}
+
+  env | grep '^AWS'
 }
 
 # For logging into the current AWS account’s registry
